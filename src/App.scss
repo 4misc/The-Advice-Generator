@@ -1,0 +1,126 @@
+* {
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+}
+
+:root {
+  --lightCyan: hsl(193, 38%, 86%);
+  --neonGreen: #52ffa8;
+  --grayishBlue: hsl(217, 19%, 38%);
+  --darkGrayishBlue: hsl(217, 19%, 24%);
+  --darkBlue: hsl(218, 23%, 16%);
+}
+
+.advice {
+  background: var(--darkBlue);
+  min-height: 100vh;
+  display: grid;
+
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-rows: 50px 185px 1fr;
+    place-self: center;
+    margin: 0 auto;
+
+    width: 340px;
+    height: 315px;
+
+    background-color: var(--darkGrayishBlue);
+    border-radius: 10px;
+
+    @media (min-width: 1440px) {
+      grid-template-rows: 50px 195px 1fr;
+
+      width: 540px;
+      height: 335px;
+    }
+  }
+
+  &__title {
+    display: grid;
+    grid-template-columns: 76px 30px;
+    align-content: end;
+    margin: 0 auto;
+
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--neonGreen);
+
+    @media (min-width: 1440px) {
+      grid-template-columns: 85px 30px;
+      font-size: 13px;
+    }
+  }
+
+  &__quote {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto;
+
+    width: 295px;
+
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--lightCyan);
+
+    @media (min-width: 1440px) {
+      width: 440px;
+
+      font-size: 26px;
+    }
+
+    &__loading {
+      color: coral;
+    }
+  }
+
+  &__divider {
+    display: grid;
+    justify-self: center;
+
+    &__mobile {
+      @media (min-width: 1440px) {
+        display: none;
+      }
+    }
+
+    &__desktop {
+      @media (max-width: 1440px) {
+        display: none;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: -32px;
+    left: 138px;
+
+    width: 64px;
+    height: 64px;
+
+    background-color: var(--neonGreen);
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0px 0px 39px 5px rgba(82, 255, 168, 0.3);
+    }
+
+    @media (min-width: 1440px) {
+      left: 238px;
+    }
+  }
+
+  &__dice {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+}
