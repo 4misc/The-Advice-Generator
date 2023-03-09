@@ -6,8 +6,8 @@ import patternDividerDesktop from "./assets/pattern-divider-desktop.svg";
 import patternDividerMobile from "./assets/pattern-divider-mobile.svg";
 
 export function App() {
-  const [advice, setAdvice] = useState();
-  const [number, setNumber] = useState();
+  const [advice, setAdvice] = useState<string>();
+  const [number, setNumber] = useState<number>();
 
   const getAdvice = async () => {
     await fetch("https://api.adviceslip.com/advice")
